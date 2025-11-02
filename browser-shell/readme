@@ -1,0 +1,5 @@
+Get started by creating an htpasswd file before starting the container. 
+
+htpasswd -c ./htpasswd jamal
+htpasswd ./htpasswd alice
+htpasswd ./htpasswd bob

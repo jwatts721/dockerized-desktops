@@ -1,3 +1,5 @@
-
 # Webtop data
 /webtop/data/
+
+# Confidential files
+htpasswd
