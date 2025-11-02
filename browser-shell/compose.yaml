@@ -1,0 +1,8 @@
+services:
+  browser-shell:
+    build: .
+    ports:
+      - "8080:8080"  # Optional if you add streaming layer
+    shm_size: "2gb"
+    environment:
+      - TZ=America/New_York

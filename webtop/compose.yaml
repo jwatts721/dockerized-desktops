@@ -1,0 +1,14 @@
+services:
+  xrdp:
+    image: linuxserver/webtop
+    restart: unless-stopped
+    shm_size: "2gb"
+    ports:
+      - "3000:3000"
+    container_name: webtops
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - ./data:/config
