@@ -1,6 +1,8 @@
 services:
   browser-shell:
     build: .
+    container_name: browser-shell
+    restart: unless-stopped
     ports:
       - "8080:8080"  # Optional if you add streaming layer
     shm_size: "2gb"
