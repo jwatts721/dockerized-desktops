@@ -11,7 +11,8 @@ openbox &
 chromium \
   --no-sandbox \
   --disable-gpu \
-  --start-fullscreen \
+  --window-size=1920,1080 \
+  --start-maximized \
   --noerrdialogs \
   --disable-infobars \
   --disable-session-crashed-bubble \
