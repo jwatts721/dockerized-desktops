@@ -31,6 +31,9 @@ RUN mkdir -p /opt/novnc /opt/websockify && \
     mv /opt/websockify-0.10.0/* /opt/websockify && \
     rm -rf /tmp/*.zip
 
+# Make vnc.html the default page
+RUN cp /opt/novnc/vnc.html /opt/novnc/index.html
+
 COPY start-stream.sh /start-stream.sh
 RUN chmod +x /start-stream.sh
 
