@@ -3,3 +3,11 @@ Get started by creating an htpasswd file before starting the container.
 htpasswd -c ./htpasswd jamal
 htpasswd ./htpasswd alice
 htpasswd ./htpasswd bob
+
+
+Renew the SSL certificate:
+1 - Stop the standard container
+2 - Start the certbot container
+  $ docker compose -f compose.certbot.yaml up -d
+3 - Run certbot command to renew the certificate
+  $ certbot certonly --webroot --webroot-path ~/repos/dockerized-desktops/browser-shell/nginx/certbot-html -d <fully-qualified-domain-name>

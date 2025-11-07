@@ -1,0 +1,9 @@
+services:
+  nginx-auth:
+    image: nginx:alpine
+    container_name: nginx-auth
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/certbot-html:/usr/share/nginx/html:ro
