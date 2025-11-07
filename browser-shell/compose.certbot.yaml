@@ -7,3 +7,5 @@ services:
       - "443:443"
     volumes:
       - ./nginx/certbot-html:/usr/share/nginx/html
+      - ./nginx/nginx.certbot.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
